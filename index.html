@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>コーポレートサイト</title>
+    <link rel="stylesheet" href="style.css">
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body class="text-center" >
+    <header>
+      <div class="logo">
+        <a href="#home--"><img src="logo.png" alt="ロゴ"></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home--">ホーム</a></li>
+          <li><a href="#features">会社概要</a></li>
+          <li><a href="#">製品・サービス</a></li>
+        </ul>
+      </nav>
+
+      <div class="contact-button">
+        <a href="#contact">お問い合わせ</a>
+      </div>
+    </header>
+    <section class="hero" id="home--" class="fade-in">
+      <div class="video-background">
+        <video autoplay muted loop>
+          <source src="hero.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-content">
+        <h1>キャッチコピー</h1>
+      </div>
+    </section>
+    <section class="catchphrase" id="features">
+      <div class="container">
+        <h2>会社のキャッチフレーズ</h2>
+        <p>会社の説明文</p>
+      </div>
+    </section>
+    <section class="features">
+      <div class="container">
+        <h2 class="catch">特徴</h2>
+        <div class="feature">
+          <img src="feature1.jpg" alt="特徴1">
+          <h3>特徴1のタイトル</h3>
+          <p>特徴1の説明文</p>
+        </div>
+        <div class="feature">
+          <img src="feature2.jpg" alt="特徴2">
+          <h3>特徴2のタイトル</h3>
+          <p>特徴2の説明文</p>
+        </div>
+        <div class="feature">
+          <img src="feature3.jpg" alt="特徴3">
+          <h3>特徴3のタイトル</h3>
+          <p>特徴3の説明文</p>
+        </div>
+      </div>
+    </section>
+    <section class="news">
+      <div class="container">
+        <h2>お知らせ</h2>
+        <div class="article">
+          <h3>お知らせ1のタイトル</h3>
+          <p>お知らせ1の本文</p>
+          <span class="date">2023年4月18日</span>
+        </div>
+        <div class="article">
+          <h3>お知らせ2のタイトル</h3>
+          <p>お知らせ2の本文</p>
+          <span class="date">2023年4月17日</span>
+    <div class="article">
+      <h3>お知らせ3のタイトル</h3>
+      <p>お知らせ3の本文</p>
+      <span class="date">2023年4月16日</span>
+    </div>
+  </div>
+</section>
+
+  <h1>先生向け:パスワードを入力してください</h1>
+  <form id="passwordForm" onsubmit="checkPassword(event)">
+    <input type="password" id="passwordInput" required>
+    <button type="submit">送信</button>
+  </form>
+
+  <script>
+    function checkPassword(event) {
+      event.preventDefault(); // フォームのデフォルトの送信をキャンセル
+
+      var password = document.getElementById("passwordInput").value;
+
+      // ここでバックエンドにパスワードの検証をリクエストするなどの処理を行います
+
+      if (password === "4xh53r") {
+        window.location.href = "apple.com/jp"; // パスワードが正しい場合はリダイレクト
+      } else {
+        alert("パスワードが間違っています。もう一度お試しください");
+      }
+    }
+  </script>
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>お問い合わせ</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">メッセージ</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit">送信</button>
+    </form>
+  </div>
+
+
+</section>
+
+<script>
+  $(document).ready(function() {
+    // #で始まるリンクをクリックした場合に処理
+    $('a[href^="#"]').click(function() {
+      // 移動先の要素を取得
+      var target = $($(this).attr('href'));
+      // ターゲットの位置を取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body, html').animate({scrollTop:position}, 500, 'swing');
+      return false;
+    });
+  });
+</script>
+<script>
+    // JavaScript code
+    var backToTopButton = document.getElementById("back");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    }
+
+    backToTopButton.addEventListener("click", function() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+  </script>
+  <script>
+    $(function() {
+      $(window).scroll(function() {
+        $('.fade-in').each(function() {
+          const position = $(this).offset().top; // 要素の位置を取得
+          const scroll = $(window).scrollTop(); // スクロール位置を取得
+          const windowHeight = $(window).height(); // ブラウザの高さを取得
+
+          if (scroll > position - windowHeight + 200) { // 要素が画面に表示されたら
+            $(this).addClass('fade-in--show'); // fade-in--show クラスを追加してフェードインで表示する
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+       
