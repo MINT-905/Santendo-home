@@ -1,0 +1,290 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+.text-center {
+  text-align: center;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  width: calc(100% - 80px);
+  height: 64px;
+  z-index: 9999;
+  background-color: #1B1D25;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-top: 20px;
+  border-radius: 500px;
+}
+.top-button a {
+  background-color: #FFC107;
+  color: #1B1D25;
+  padding: 6px 8px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.header-logo {
+  height: 40px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-item {
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.hero {
+  height: 600px;
+  background: url(https://example.com/video.mp4) no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.logo img {
+  height: 32px;
+}
+.catch h2{
+  font-size: 48px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 16px;
+}
+
+nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.contact-button a {
+  background-color: #FFC107;
+  color: #1B1D25;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.contact-button a:hover {
+  background-color: #FFD54F;
+}
+
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-content h1 {
+  color: #FFFFFF;
+  font-size: 48px;
+  margin: 0;
+}
+
+.catchphrase {
+  background-color: #1B1D25;
+  color: #FFFFFF;
+  padding: 64px 24px;
+}
+
+.catchphrase h2 {
+  font-size: 36px;
+  margin: 0 0 16px;
+}
+
+.catchphrase p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.features {
+  background-color: #FFFFFF;
+  padding: 64px 24px;
+}
+
+.features h2
+font-size: 48px;
+margin: 0 0 32px;
+text-align: center;
+}
+
+.feature {
+text-align: center;
+}
+
+.feature img {
+width: 100%;
+max-width: 360px;
+height: auto;
+margin-bottom: 16px;
+}
+
+.feature h3 {
+font-size: 24px;
+margin: 0;
+}
+
+.feature p {
+font-size: 16px;
+margin: 16px 0 0;
+}
+
+.articles {
+background-color: #F5F5F5;
+padding: 64px 24px;
+}
+
+.articles h2 {
+font-size: 36px;
+margin: 0 0 32px;
+text-align: center;
+}
+
+.article {
+margin-bottom: 32px;
+}
+
+.article h3 {
+font-size: 24px;
+margin: 0 0 16px;
+}
+
+.article p {
+font-size: 16px;
+margin: 0 0 16px;
+}
+.fade-in {
+  opacity: 0; /* 最初は不透明度を0にして非表示にする */
+  transition: opacity 0.5s ease-in-out; /* アニメーションを0.5秒かけて実行する */
+}
+
+
+.article .date {
+font-size: 14px;
+color: #777777;
+}
+
+.contact {
+background-color: #1B1D25;
+color: #FFFFFF;
+padding: 64px 24px;
+text-align: center;
+}
+
+.contact h2 {
+font-size: 36px;
+margin: 0 0 32px;
+}
+
+form {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+#back-to-top {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      display: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #333;
+      color: #fff;
+      font-size: 24px;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+    }
+.form-group {
+width: 100%;
+max-width: 480px;
+margin: 16px;
+}
+
+label {
+display: block;
+font-size: 18px;
+margin-bottom: 8px;
+}
+
+input,
+textarea {
+width: 100%;
+padding: 8px;
+font-size: 16px;
+border-radius: 4px;
+border: none;
+background-color: #F5F5F5;
+}
+
+textarea {
+height: 120px;
+resize: none;
+}
+
+button[type="submit"] {
+background-color: #FFC107;
+color: #1B1D25;
+padding: 8px 16px;
+border: none;
+border-radius: 4px;
+font-size: 16px;
+margin-top: 16px;
+cursor: pointer;
+}
+
+button[type="submit"]:hover {
+background-color: #FFD54F;
+}
